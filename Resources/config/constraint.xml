@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="infinite_validation.constraint_validator.domain_name" class="Infinite\ValidationBundle\Constraint\DomainNameValidator">
+            <tag name="validator.constraint_validator" />
+        </service>
+
+        <service id="infinite_validation.constraint_validator.phone_number" class="Infinite\ValidationBundle\Constraint\PhoneNumberValidator">
+            <argument type="service" id="infinite_validation.phone_number_util" />
+            <argument>AU</argument>
+            <tag name="validator.constraint_validator" />
+        </service>
+
+        <service id="infinite_validation.constraint_validator.valid_expression" class="Infinite\ValidationBundle\Constraint\ValidExpressionValidator">
+            <tag name="validator.constraint_validator" />
+        </service>
+
+        <service id="infinite_validation.phone_number_util" class="libphonenumber\PhoneNumberUtil" public="false">
+            <factory class="libphonenumber\PhoneNumberUtil" method="getInstance" />
+        </service>
+    </services>
+</container>
