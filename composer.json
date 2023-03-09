@@ -2,27 +2,20 @@
   "name": "infinite-networks/validation-bundle",
   "description": "Validation Constraints",
   "license": "MIT",
-  "authors": [
-    {
-      "name": "Tim Nagel",
-      "email": "t.nagel@infinite.net.au"
-    }
-  ],
   "require": {
     "giggsey/libphonenumber-for-php": "^8.8",
-    "symfony/config": "~2.7|~3.0|~4.0",
-    "symfony/dependency-injection": "~2.7|~3.0|~4.0",
-    "symfony/http-kernel": "~2.7|~3.0|~4.0",
-    "symfony/validator": "~2.7|~3.0|~4.0"
+    "symfony/config": ">=4.4.50",
+    "symfony/dependency-injection": ">=4.4.50",
+    "symfony/http-kernel": ">=4.4.50",
+    "symfony/validator": ">=4.4.50"
   },
   "require-dev": {
-    "phpunit/phpunit": "^5.7",
-    "symfony/expression-language": "~2.7|~3.0|~4.0",
-    "symfony/polyfill-intl-icu": "@stable"
+    "phpunit/phpunit": "^9.0|^10.0",
+    "symfony/expression-language": ">=4.4.50"
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "1.1.x-dev"
+      "dev-master": "2.0.x-dev"
     }
   },
   "autoload": {

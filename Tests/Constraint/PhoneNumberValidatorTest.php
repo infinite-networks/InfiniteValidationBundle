@@ -58,7 +58,7 @@ class PhoneNumberValidatorTest extends ConstraintValidatorTestCase
         $this->assertEquals('property.path', $violations->get(0)->getPropertyPath());
     }
 
-    public function getInvalidNumbers()
+    public static function getInvalidNumbers()
     {
         return [
             ['purple'],
@@ -79,7 +79,7 @@ class PhoneNumberValidatorTest extends ConstraintValidatorTestCase
         $this->assertNoViolation();
     }
 
-    public function getValidNumbers()
+    public static function getValidNumbers()
     {
         return [
             ['+64212345678'],

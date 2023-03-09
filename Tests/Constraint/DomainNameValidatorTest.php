@@ -61,7 +61,7 @@ class DomainNameValidatorTest extends ConstraintValidatorTestCase
         }
     }
 
-    public function getDomainNameTests()
+    public static function getDomainNameTests()
     {
         return [
             ['caffeinatedhusky.com',    true],
